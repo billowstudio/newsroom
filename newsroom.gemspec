@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "newsroom"
-  spec.version       = "0.1.0"
-  spec.authors       = [""]
-  spec.email         = [""]
+  spec.version       = "0.0.1"
+  spec.authors       = ["billow_studio"]
+  spec.email         = ["billowstudio@gmail.com"]
 
   spec.summary       = "TODO: Write a short summary, because Rubygems requires one."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/billowstudio/newsroom/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }

@@ -1,3 +1,8 @@
+# The newsroom theme
+
+Newsroom is a Jekyll theme. You can preview the theme to see what it looks like, or even use it today.
+
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
@@ -20,22 +25,47 @@ Or install it yourself as:
 
     $ gem install newsroom
 
-## Usage
+### Customizing
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+### Configuration variables
 
-## Contributing
+Newsroom will respect the following variables, if set in your site's `_config.yml`:
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+```yml
+title: [The title of your site]
+description: [A short description of your site's purpose]
+```
 
-## Development
+Additionally, you may choose to set the following optional variables:
 
-To set up your environment to develop this theme, run `bundle install`.
+```yml
+google_analytics: [Your Google Analytics tracking ID]
+```
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+### Stylesheet
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `newsroom.gemspec` accordingly.
+If you'd like to add your own custom styles:
+
+1. Create a file called `/assets/css/style.scss` in your site
+2. Add the following content to the top of the file, exactly as shown:
+    ```scss
+    ---
+    ---
+
+    @import "{{ site.theme }}";
+    ```
+3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
+
+*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
+
+### Customizing Google Analytics code
+
+Google has released several iterations to their Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/google-analytics.html` in your Jekyll site.
+
+## Project philosophy
+
+Newsroom theme is intended to make it quick and easy for Jekyll users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+
 
 ## License
 
