@@ -1,6 +1,6 @@
 # The newsroom theme
 
-Newsroom is a Jekyll theme. You can preview the theme to see what it looks like, or even use it today.
+Newsroom is a Jekyll theme.
 
 
 ## Installation
